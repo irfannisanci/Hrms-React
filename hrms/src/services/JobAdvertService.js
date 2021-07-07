@@ -17,5 +17,9 @@ export default class JobAdvertService {
     getByIsActiveAndEmployerCompanyName(companyName){
         return axios.get(`http://localhost:8080/api/jobadverts/findByIsActiveAndEmployer_CompanyName?companyName=${companyName}`)
     }
+
+    getByIsActiveTrueAndEmployerId(id){
+        return axios.get(`http://localhost:8080/api/jobadverts/findByIsActiveTrueAndEmployer_Id?id=${id}`)
+    }
 }
 

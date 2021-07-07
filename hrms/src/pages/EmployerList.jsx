@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Table, Menu, Icon } from "semantic-ui-react";
 import EmployerService from "../services/EmployerService";
+import { Link } from "react-router-dom";
 
 export default function EmployerList() {
   const [employers, setEmployers] = useState([]);
@@ -28,6 +29,7 @@ export default function EmployerList() {
               <Table.Cell>{employer.email}</Table.Cell>
               <Table.Cell>{employer.webAddress}</Table.Cell>
               <Table.Cell>{employer.phoneNumber}</Table.Cell>
+              <Table.Cell><Link to={`employers/${employer.id}`}>Şirkete Ait İş İlanları</Link></Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>
